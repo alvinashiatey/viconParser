@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./dist/vicon-parser.iife.js"></script>
+    <title>Vicon Parser</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script>
+    const { vParser } = viconParser;
+    (async () => {
+      await vParser("./data/cup_wkshp.csv")
+        .then((r) => console.log(r))
+        .catch((e) => console.error(e.message));
+    })();
+  </script>
+</html>
